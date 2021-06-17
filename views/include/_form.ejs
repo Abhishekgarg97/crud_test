@@ -7,21 +7,23 @@
 >
     <div class="new_user">
         <div class="form-group">
-            <label for="name" class="text-light">Name</label>
-            <input type="hidden" name="id" value="" />
-            <input type="text" name="name" value="" placeholder="Name" />
+            <label for="username">Username</label>
+            <input type="text" placeholder="Name" id="username" />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
         </div>
+
         <div class="form-group">
-            <label for="Email" class="text-light">Email</label>
-            <input
-                type="text"
-                name="email"
-                value=""
-                placeholder="example@gmail.com"
-            />
+            <label for="Email" class="text-dark">Email</label>
+            <input type="email" id="email" placeholder="example@gmail.com" />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
         </div>
+
         <div class="form-group">
-            <label for="gender" class="text-light">Gender</label>
+            <label for="gender" class="text-dark">Gender</label>
             <div class="radio inline">
                 <input type="radio" id="radio-2" name="gender" value="Male" />
                 <label for="radio-2" class="radio-label">Male</label>
@@ -31,12 +33,16 @@
                 <label for="radio-3" class="radio-label">Female</label>
             </div>
         </div>
+
         <div class="form-group">
-            <label for="contact" class="text-light">contact</label>
-            <input type="text" name="contact" value="" placeholder="number" />
+            <label for="contact" class="text-dark">contact</label>
+            <input type="number" name="number" value="" placeholder="number" />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
         </div>
         <div class="form-group">
-            <label for="designation" class="text-light">designation</label>
+            <label for="designation" class="text-dark">designation</label>
             <input
                 type="text"
                 name="designation"
@@ -44,26 +50,50 @@
                 placeholder="job profile"
             />
         </div>
+        <input type="file" name="image" />
+        <input type="submit" value="Upload" />
 
         <div class="form-group">
-            <label for="gender" class="text-light">Status</label>
-            <div class="radio inline">
-                <input type="radio" id="radio-4" name="status" value="Active" />
-                <label for="radio-4" class="radio-label">Active</label>
-            </div>
-            <div class="radio inline">
-                <input
-                    type="radio"
-                    id="radio-5"
-                    name="status"
-                    value="Inactive"
-                />
-                <label for="radio-5" class="radio-label">Inactive</label>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <button type="submit" class="btn text-dark update">Save</button>
+            <button class="btn text-dark update">Submit</button>
         </div>
     </div>
 </form>
+<!-- SOCIAL PANEL HTML -->
+<div class="social-panel-container">
+    <div class="social-panel">
+        <p>
+            Created with <i class="fa fa-heart"></i> by
+            <a target="_blank" href="https://florin-pop.com">Florin Pop</a>
+        </p>
+        <button class="close-btn"><i class="fas fa-times"></i></button>
+        <h4>Get in touch on</h4>
+        <ul>
+            <li>
+                <a href="https://www.patreon.com/florinpop17" target="_blank">
+                    <i class="fab fa-discord"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/florinpop1705" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://linkedin.com/in/florinpop17" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://facebook.com/florinpop17" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://instagram.com/florinpop17" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<button class="floating-btn">Get in Touch</button>
