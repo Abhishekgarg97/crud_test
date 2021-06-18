@@ -3,9 +3,9 @@ $("#add_user").submit(function (event) {
 });
 
 // const form = document.getElementById("add_user");
-// const username = document.getElementById("username");
-// const email = document.getElementById("email");
-// const number = document.getElementById("number");
+const username = document.getElementById("username");
+const email = document.getElementById("email");
+const number = document.getElementById("number");
 
 // form.addEventListener("submit", (e) => {
 //     e.preventDefault();
