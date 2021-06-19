@@ -1,64 +1,64 @@
-$("#add_user").submit(function (event) {
+$("#add_user").submit(function () {
     alert("Data Inserted Successfully!");
 });
 
-// const form = document.getElementById("add_user");
+/* const form = document.getElementById("add_user");
 const username = document.getElementById("username");
 const email = document.getElementById("email");
 const number = document.getElementById("number");
 
-// form.addEventListener("submit", (e) => {
-//     e.preventDefault();
-//     checkInputs();
-// });
-// console.log("checkInputs()");
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    checkInputs();
+});
+console.log("checkInputs()");
 
-// function checkInputs() {
-//     // trim to remove the whitespaces
-//     const usernameValue = username.value.trim();
-//     const emailValue = email.value.trim();
-//     const numberValue = number.value.trim();
+function checkInputs() {
+    // trim to remove the whitespaces
+    const usernameValue = username.value.trim();
+    const emailValue = email.value.trim();
+    const numberValue = number.value.trim();
 
-//     if (usernameValue === "") {
-//         setErrorFor(username, "Username cannot be blank");
-//     } else {
-//         setSuccessFor(username);
-//     }
+    if (usernameValue === "") {
+        setErrorFor(username, "Username cannot be blank");
+    } else {
+        setSuccessFor(username);
+    }
 
-//     if (emailValue === "") {
-//         setErrorFor(email, "Email cannot be blank");
-//     } else if (!isEmail(emailValue)) {
-//         setErrorFor(email, "Not a valid email");
-//     } else {
-//         setSuccessFor(email);
-//     }
+    if (emailValue === "") {
+        setErrorFor(email, "Email cannot be blank");
+    } else if (!isEmail(emailValue)) {
+        setErrorFor(email, "Not a valid email");
+    } else {
+        setSuccessFor(email);
+    }
 
-//     if (numberValue === "") {
-//         setErrorFor(number, "number cannot be blank");
-//     } else {
-//         setSuccessFor(number);
-//     }
-//     alert("Data Inserted Successfully!");
-// }
+    if (numberValue === "") {
+        setErrorFor(number, "number cannot be blank");
+    } else {
+        setSuccessFor(number);
+    }
+    alert("Data Inserted Successfully!");
+}
 
-// function setErrorFor(input, message) {
-//     const formGroup = input.parentElement;
-//     const small = formGroup.querySelector("small");
-//     formGroup.className = "form-group error";
-//     small.innerText = message;
-// }
+function setErrorFor(input, message) {
+    const formGroup = input.parentElement;
+    const small = formGroup.querySelector("small");
+    formGroup.className = "form-group error";
+    small.innerText = message;
+}
 
-// function setSuccessFor(input) {
-//     const formGroup = input.parentElement;
-//     formGroup.className = "form-group success";
-// }
+function setSuccessFor(input) {
+    const formGroup = input.parentElement;
+    formGroup.className = "form-group success";
+}
 
-// function isEmail(email) {
-//     return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
-//         email
-//     );
-// }
-
+function isEmail(email) {
+    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+        email
+    );
+}
+ */
 $("#update_user").submit(function (event) {
     event.preventDefault();
 

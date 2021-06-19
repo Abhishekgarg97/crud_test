@@ -4,7 +4,7 @@ const morgan = require("morgan");
 const bodyparser = require("body-parser");
 const path = require("path");
 const connectDB = require("./server/database/connection");
-
+const route = express.Router();
 const app = express();
 
 dotenv.config({ path: "config.env" });
@@ -48,6 +48,16 @@ var upload = multer({
     },
     fileFilter: fileFilter,
 });
+route.get("/", function (req, res) {
+    res.sendFile(__dirname + "/index.ejs");
+});
+route.post("/api/users", upload.single("image"), function (req, res, next) {
+    const filename = req.file.filename;
+    res.json({
+        message: "Image Uploaded Successfully",
+        filename: filename,
+    });
+});
 
 //ending
 
@@ -74,3 +84,5 @@ app.use("/", require("./server/routes/router"));
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
+
+module.exports = route;
