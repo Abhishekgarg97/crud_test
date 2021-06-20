@@ -11,7 +11,7 @@ dotenv.config({ path: "config.env" });
 
 const PORT = process.env.PORT || 8080;
 
-// upload()
+// file upload()
 var multer = require("multer");
 const fs = require("fs");
 var storage = multer.diskStorage({
@@ -41,13 +41,13 @@ const fileFilter = (req, file, callback) => {
     }
 };
 
-// var upload = multer({
-//     storage: storage,
-//     limits: {
-//         fileSize: 1024 * 1024 * 5,
-//     },
-//     fileFilter: fileFilter,
-// });
+var upload = multer({
+    storage: storage,
+    limits: {
+        fileSize: 1024 * 1024 * 5,
+    },
+    fileFilter: fileFilter,
+});
 // route.get("/", function (req, res) {
 //     res.sendFile(__dirname + "/index.ejs");
 // });
