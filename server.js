@@ -15,19 +15,19 @@ const PORT = process.env.PORT || 8080;
 var multer = require("multer");
 const fs = require("fs");
 var storage = multer.diskStorage({
-    destination: function (req, file, cb) {
+    destination: function (req, file, callback) {
         var dir = "./uploads";
         if (!fs.existsSync(dir)) {
             fs.mkdirSync(dir);
         }
-        cb(null, dir);
+        callback(null, dir);
     },
-    filename: function (req, file, cb) {
-        cb(null, Date.now() + file.originalname);
+    filename: function (req, file, callback) {
+        callback(null, Date.now() + file.originalname);
     },
 });
 
-const fileFilter = (req, file, cb) => {
+const fileFilter = (req, file, callback) => {
     if (
         file.mimetype === "image/jpeg" ||
         file.mimetype === "image/jpg" ||
@@ -35,29 +35,29 @@ const fileFilter = (req, file, cb) => {
         file.mimetype === "application/msword" ||
         file.mimetype === "image/png"
     ) {
-        cb(null, true);
+        callback(null, true);
     } else {
-        cb(null, false);
+        callback(null, false);
     }
 };
 
-var upload = multer({
-    storage: storage,
-    limits: {
-        fileSize: 1024 * 1024 * 5,
-    },
-    fileFilter: fileFilter,
-});
-route.get("/", function (req, res) {
-    res.sendFile(__dirname + "/index.ejs");
-});
-route.post("/api/users", upload.single("image"), function (req, res, next) {
-    const filename = req.file.filename;
-    res.json({
-        message: "Image Uploaded Successfully",
-        filename: filename,
-    });
-});
+// var upload = multer({
+//     storage: storage,
+//     limits: {
+//         fileSize: 1024 * 1024 * 5,
+//     },
+//     fileFilter: fileFilter,
+// });
+// route.get("/", function (req, res) {
+//     res.sendFile(__dirname + "/index.ejs");
+// });
+// route.post("/api/users", upload.single("image"), function (req, res, next) {
+//     const filename = req.file.filename;
+//     res.json({
+//         message: "Image Uploaded Successfully",
+//         filename: filename,
+//     });
+// });
 
 //ending
 

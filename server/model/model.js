@@ -15,6 +15,7 @@ var schema = new mongoose.Schema({
         required: true,
     },
     gender: String,
+    status: String,
     designation: String,
     file: String,
 });
