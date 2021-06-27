@@ -1,6 +1,6 @@
-$("#add_user").submit(function (event) {
-    event.preventDefault();
-});
+// $("#add_user").submit(function (event) {
+//     event.preventDefault();
+// });
 
 $("#update_user").submit(function (event) {
     event.preventDefault();

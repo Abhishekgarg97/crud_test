@@ -45,6 +45,8 @@ const checkNumber = () => {
 
     if (!isRequired(number)) {
         showError(numberEl, "Contact cannot be blank.");
+    } else if ((number.length = !10)) {
+        showError(numberE1, "*Phone number should be of 10 digits!");
     } else {
         showSuccess(numberEl);
         valid = true;
@@ -103,5 +105,5 @@ form.addEventListener("submit", function (e) {
     if (isFormValid) {
         alert("Data Successfully submitted");
     }
-    console.log("Data Successfully submitted");
+    // console.log("Data Successfully submitted");
 });
