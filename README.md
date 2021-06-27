@@ -1,5 +1,6 @@
-##  Crud Operation in Node Using MongoDb
-in this project I learnt about 
+## Crud Operation in Node Using MongoDb
+
+in this project I learnt about
 
 1. **react api** concept
 2. ejs to create the html templates
@@ -17,9 +18,11 @@ in this project I learnt about
 
 **Future Scope**
 
-	1.add multer for uploading documnets
-	2. add form validation for validating user inputs
-	3.add responsiveness
+```
+1.add multer for uploading documnets
+2. add form validation for validating user inputs
+3.add responsiveness
+```
 
-copyright [abhishekgarg](http://iamabhishekgarg.tech  "abhishekgarg")
+copyright [abhishekgarg](http://iamabhishekgarg.tech "abhishekgarg")
 You can try my packages from [npm i abhishekgarg](https://www.npmjs.com/package/abhishekgarg "npm i abhishekgarg")
