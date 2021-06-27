@@ -7,7 +7,9 @@ const connectDB = require("./server/database/connection");
 const route = express.Router();
 const app = express();
 
-dotenv.config({ path: "config.env" });
+dotenv.config({
+    path: "config.env",
+});
 
 const PORT = process.env.PORT || 8080;
 
@@ -22,41 +24,37 @@ var storage = multer.diskStorage({
         }
         callback(null, dir);
     },
+
     filename: function (req, file, callback) {
         callback(null, Date.now() + file.originalname);
     },
 });
 
-const fileFilter = (req, file, callback) => {
-    if (
-        file.mimetype === "image/jpeg" ||
-        file.mimetype === "image/jpg" ||
-        file.mimetype === "application/pdf" ||
-        file.mimetype === "application/msword" ||
-        file.mimetype === "image/png"
-    ) {
-        callback(null, true);
-    } else {
-        callback(null, false);
-    }
-};
-
 var upload = multer({
     storage: storage,
-    limits: {
-        fileSize: 1024 * 1024 * 5,
+    fileFilter: (req, file, cb) => {
+        if (
+            file.mimetype == "image/png" ||
+            file.mimetype == "image/jpg" ||
+            file.mimetype == "image/jpeg"
+        ) {
+            cb(null, true);
+        } else {
+            cb(null, false);
+            return cb(new Error("Only .png, .jpg and .jpeg format allowed!"));
+        }
     },
-    fileFilter: fileFilter,
 });
-// route.get("/", function (req, res) {
-//     res.sendFile(__dirname + "/index.ejs");
-// });
-// route.post("/api/users", upload.single("image"), function (req, res, next) {
+
+// app.post("/api/users", upload.single("image"), function (req, res, next) {
 //     const filename = req.file.filename;
 //     res.json({
 //         message: "Image Uploaded Successfully",
 //         filename: filename,
 //     });
+// });
+// app.get("/", (req, res) => {
+//     res.send("new file");
 // });
 
 //ending
@@ -67,7 +65,11 @@ app.use(morgan("tiny"));
 //mongodb connection
 connectDB();
 //parse requests  to body parser
-app.use(bodyparser.urlencoded({ extended: true }));
+app.use(
+    bodyparser.urlencoded({
+        extended: true,
+    })
+);
 
 //set view engine
 app.set("view engine", "ejs");

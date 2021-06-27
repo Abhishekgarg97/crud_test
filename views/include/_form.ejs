@@ -1,19 +1,32 @@
-<!--Form-->
+<!-- Form -->
 <form action="/api/users" method="POST" id="add_user">
     <div class="new_user">
         <div class="form-group">
             <label for="name" class="text-dark">Name</label>
             <input type="hidden" name="id" value="" />
-            <input type="text" name="name" value="" placeholder="UserName" />
+            <input
+                type="text"
+                name="name"
+                value=""
+                id="username"
+                placeholder="UserName"
+                style="border-radius: 25px"
+            />
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
         </div>
         <div class="form-group">
-            <label for="Email" class="text-dark">Email</label>
+            <label for="Email📧" class="text-dark">Email</label>
             <input
                 type="text"
                 name="email"
                 value=""
+                style="border-radius: 25px"
+                id="email"
                 placeholder="example@domain.com"
             />
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
         </div>
         <div class="form-group">
             <label for="gender" class="text-dark">Gender</label>
@@ -28,7 +41,16 @@
         </div>
         <div class="form-group">
             <label for="contact" class="text-dark">contact</label>
-            <input type="text" name="contact" value="" placeholder="Number" />
+            <input
+                type="text"
+                name="contact"
+                value=""
+                id="number"
+                placeholder="Number"
+                style="border-radius: 25px"
+            />
+            <i class="fas fa-exclamation-circle"></i>
+            <small>input the contact number</small>
         </div>
         <div class="form-group">
             <label for="designation" class="text-dark">Designation</label>
@@ -36,13 +58,19 @@
                 type="text"
                 name="Designation"
                 value=""
+                style="border-radius: 25px"
                 placeholder="job profile"
             />
         </div>
         <input type="file" id="file" name="file" />
-        <button type="submit" value="Upload" /></button>
         <div class="form-group">
-            <button type="submit" class="btn text-dark update">Save</button>
+            <button
+                type="submit"
+                style="border-radius: 25px"
+                class="btn text-dark update"
+            >
+                Submit
+            </button>
         </div>
     </div>
 </form>
