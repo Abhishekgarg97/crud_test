@@ -105,5 +105,6 @@ form.addEventListener("submit", function (e) {
     if (isFormValid) {
         alert("Data Successfully submitted");
     }
+
     // console.log("Data Successfully submitted");
 });
