@@ -1,5 +1,10 @@
 <!-- Form -->
-<form action="/api/users" method="POST" id="add_user">
+<form
+    action="/api/users"
+    method="POST"
+    id="add_user"
+    onsubmit="return validateForm()"
+>
     <div class="new_user">
         <div class="form-group">
             <label for="name" class="text-dark">Name</label>

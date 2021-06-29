@@ -2,7 +2,7 @@ const usernameEl = document.querySelector("#username");
 const emailEl = document.querySelector("#email");
 const numberEl = document.querySelector("#number");
 
-const form = document.querySelector("#add_user");
+// const form = document.querySelector("#add_user");
 
 const checkUsername = () => {
     let valid = false;
@@ -90,8 +90,9 @@ const showSuccess = (input) => {
     error.textContent = "";
 };
 
-form.addEventListener("submit", function (e) {
-    // prevent the form from submitting
+// form.addEventListener("submit", function (e) {
+// prevent the form from submitting
+function validateform() {
     e.preventDefault();
 
     // validate fields
@@ -106,5 +107,6 @@ form.addEventListener("submit", function (e) {
         alert("Data Successfully submitted");
     }
 
-    // console.log("Data Successfully submitted");
-});
+    console.log("Data Successfully submitted");
+}
+// });
