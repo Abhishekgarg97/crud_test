@@ -19,9 +19,10 @@ in this project I learnt about
 **Future Scope**
 
 ```
-1.add multer for uploading documnets
+1.add multer for uploading documnets -- done
 2. add form validation for validating user inputs
 3.add responsiveness
+4.add profile picture view
 ```
 
 copyright [abhishekgarg](http://iamabhishekgarg.tech "abhishekgarg")
