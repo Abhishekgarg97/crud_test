@@ -20,7 +20,7 @@ in this project I learnt about
 
 ```
 1.add multer for uploading documnets -- done
-2. add form validation for validating user inputs
+2. add form validation for validating user inputs -- done
 3.add responsiveness
 4.add profile picture view
 ```

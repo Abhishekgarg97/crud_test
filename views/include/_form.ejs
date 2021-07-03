@@ -11,6 +11,7 @@
             <input type="hidden" name="id" value="" />
             <input
                 type="text"
+                required
                 name="name"
                 value=""
                 id="username"
@@ -23,11 +24,13 @@
         <div class="form-group">
             <label for="Email📧" class="text-dark">Email</label>
             <input
-                type="text"
+                type="email"
                 name="email"
                 value=""
                 style="border-radius: 25px"
                 id="email"
+                required
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
                 placeholder="example@domain.com"
             />
             <!-- <img src="css/mail.svg" alt="" /> -->
@@ -52,7 +55,9 @@
                 name="contact"
                 value=""
                 id="number"
+                required
                 placeholder="Number"
+                pattern="[6789][0-9]{9}"
                 style="border-radius: 25px"
             />
             <i class="fas fa-exclamation-circle"></i>
